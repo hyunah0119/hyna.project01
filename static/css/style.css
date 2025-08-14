@@ -1,0 +1,88 @@
+/*
+메인 브라운 계열
+
+진한 브라운 (Primary): #6B3E26 → 로고, 헤더 배경, 주요 버튼
+라이트 브라운 (Secondary): #A47551 → hover 색상, 아이콘 강조
+베이지/크림 (Background): #F7F3EE → 섹션 배경, 카드 배경
+
+서브 색상
+화이트: #FFFFFF → 텍스트 대비를 위해 메뉴 섹션, 컨텐츠 배경
+웜 그레이: #E6E2DD → 보더, 구분선
+포인트 골드: #C89F65 → 버튼 hover, 링크, 가격 강조
+*/
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
+}
+.header {
+    display: flex;
+    width: 100%;
+    background-color: #6B3E26;
+    padding: 10px 50px;
+    box-sizing: border-box;
+}
+.header-logo {
+    display: inline-block;
+    width: 150px;
+    font-size: 18px;
+    border: 1px solid aliceblue;
+}
+.header-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: calc(100% - 150px);
+}
+.header-hambtn {display: none;}
+.header-nav {margin: 0 auto;}
+.header-nav .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header-nav .nav-list li {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+.header-util {
+    display: flex;
+    align-items: center;
+}
+.header-util a,
+.header-util span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.header-util span {margin: 0 5px;}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .header-hambtn {
+        display: block;
+    }
+
+    .header-nav {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .header-hambtn {
+        display: block;
+    }
+
+    .header-nav {
+        display: none;
+    }
+}

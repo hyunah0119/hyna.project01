@@ -326,6 +326,6 @@
         width: 100%;
     }
     .list-wrap .menu-list:last-child {margin-top: 0;}
-
     .swiper-button-next, .swiper-button-prev {display: none !important;}
+    .location-wrap .map {padding: 15px 30px;}
 }

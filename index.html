@@ -4,49 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hyna project01 - Homepage</title>
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="./static/css/reset.css?ver=250814">
     <link rel="stylesheet" href="./static/css/style.css?ver=250814">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header class="header">
         <!-- Logo -->
-        <h1 class="header-logo">LOGO</h1>
+        <h1 class="header-logo"><a href="#">HYNA's Cafe</a></h1>
 
         <div class="header-wrap">
             <!-- hamburger btn -->
-            <button class="header-hambtn"></button>
+            <button class="header-hambtn" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="dimm"></div>
 
-            <!-- GNB -->
-            <nav class="header-nav">
-                <ul class="nav-list">
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Menu</li>
-                    <li>Location</li>
-                </ul>
-            </nav>
-            
-            <!-- util -->
-            <div class="header-util">
-                <a class="contact">문의하기</a>
-                <span>|</span>
-                <a class="apply">예약하기</a>
-            </div>
+            <aside class="nav-wrap" id="navWrap">
+                <!-- GNB -->
+                <nav class="header-nav">
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#aboutUs">About Us</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- util -->
+                <div class="header-util">
+                    <a class="contact" href="#">문의하기</a>
+                    <span>|</span>
+                    <a class="apply" href="#">예약하기</a>
+                </div>
+            </aside>
         </div>
     </header>
-    <main>
-        <!-- banner -->
-        <section></section>
 
-        <!-- info -->
-        <section></section>
+    <main class="middle">
+        <!-- banner -->
+        <section class="banner-wrap" id="home">
+            <!-- Swiper -->
+            <div class="swiper bannerSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./static/images/banner01.jpg" alt="배너이미지 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./static/images/banner02.jpg" alt="배너이미지 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./static/images/banner03.jpg" alt="배너이미지 3">
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- info (about us) -->
+        <section class="info-wrap" id="aboutUs">
+            <h3>About Us</h3>
+            <p>Explore Our Coffee Shop</p>
+
+            <div class="info-card">
+                <article class="card-box">
+                    <em><i class="fa-solid fa-mug-hot fa-2xl"></i></em>
+                    <h5>Brewed Coffee</h5>
+                    <p>브루잉 커피는 에스프레소처럼 짧은 시간에 고압으로 추출하는 방식과 달리, 물을 천천히 부어 커피를 우려내는 방식으로 추출합니다.</p>
+                </article>
+                <article class="card-box">
+                    <em><i class="fa-solid fa-mug-saucer fa-2xl"></i></em>
+                    <h5>Coffee Beans - Arabica</h5>
+                    <p>전 세계 커피 생산량의 70% 이상을 차지하며, 향미가 풍부하고 부드러운 맛이 특징입니다.</p>
+                </article>
+                <article class="card-box">
+                    <em><i class="fa-solid fa-mug-saucer fa-2xl"></i></em>
+                    <h5>Coffee Beans - Robusta</h5>
+                    <p>아라비카보다 쓴맛과 떫은 맛이 강하고 카페인 함량이 높습니다.</p>
+                </article>
+                <article class="card-box">
+                    <em><i class="fa-solid fa-mug-saucer fa-2xl"></i></em>
+                    <h5>Coffee Beans - Liberica</h5>
+                    <p>상대적으로 생산량이 적고, 독특한 향과 맛을 가지고 있습니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- menu -->
+        <section class="menu-wrap" id="menu">
+            <h3>Menu</h3>
+
+            <div class="list-wrap">
+                <article class="menu-list coffee">
+                    <h5>Coffee Menu</h5>
+                    <ul class="list-items">
+                        <li>아메리카노</li>
+                        <li>카페라떼</li>
+                        <li>바닐라라떼</li>
+                        <li>큐브라떼</li>
+                        <li>카페모카</li>
+                        <li>카푸치노</li>
+                        <li>카라멜마끼아또</li>
+                        <li>헤이즐넛 아메리카노</li>
+                        <li>헤이즐넛 라떼</li>
+                    </ul>
+                </article>
+                <article class="menu-list non-Coffee">
+                    <h5>Non-Coffee Menu</h5>
+
+                    <ul class="list-items">
+                        <li>복숭아아이스티</li>
+                        <li>허니자몽블랙티</li>
+                        <li>유자차</li>
+                        <li>자몽차</li>
+                        <li>레몬차</li>
+                        <li>캐모마일</li>
+                        <li>얼그레이</li>
+                        <li>페퍼민트</li>
+                        <li>녹차</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
 
         <!-- location -->
-         <section></section>
+        <section class="location-wrap" id="location">
+            <h3>Location</h3>
+
+            <article class="map">
+                <!-- 반응형 Google Maps 임베드 -->
+                <div style="position:relative;padding-bottom:56%;height:0;overflow:hidden;border-radius:10px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.579977585904!2d126.92387607650859!3d37.55747707205428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c98d6603c6e2d%3A0xf517c3cdbf5e08c4!2z7ZWc64yA7J6l7Yuw7Y-s7Yq47Yq567OE7Iuc!5e0!3m2!1sko!2skr!4v1723718432109!5m2!1sko!2skr"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </article>
+        </section>
     </main>
-    <footer></footer>
+
+    <footer class="footer">
+        <p>&copy; 2025 HYNA's Cafe. Designed & Developed by HYNA.</p>
+    </footer>
+
+    <script>
+        //Break point
+        const tablet = window.matchMedia("(max-width: 1024px)");
+        const mobile = window.matchMedia("(max-width: 640px)");
+
+        //Scroll event
+        function scrollHeader() {
+            const header = document.querySelector('.header');
+
+            window.addEventListener('scroll', function(){
+                if(window.scrollY > 0) {
+                    header.classList.add('is-fixed');
+                } else {
+                    header.classList.remove('is-fixed');
+                }
+            });
+        }
+
+        scrollHeader();
+
+        //Swiper
+        var swiper = new Swiper(".bannerSwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        //menuIcon
+        function menuIcon() {
+            const iconBar = document.querySelector('#hamburgerBtn .fa-bars');
+            const iconXmark = document.querySelector('#hamburgerBtn .fa-xmark');
+
+            if (mobile.matches) { //모바일
+                iconBar.classList.remove('fa-lg');
+                iconXmark.classList.remove('fa-lg');
+            } 
+            else if (tablet.matches) { //태블릿
+                iconBar.classList.add('fa-lg');
+                iconXmark.classList.add('fa-lg');
+            }
+        }
+
+        menuIcon();
+        tablet.addEventListener?.("change", menuIcon);
+        mobile.addEventListener?.("change", menuIcon);
+
+        // 창 크기 변경 시 실행
+        window.addEventListener("resize", menuIcon);
+        window.addEventListener("orientationchange", menuIcon);
+
+        //hamburger click event
+        function menuBtnclick() {
+            const btn  = document.getElementById('hamburgerBtn');
+            const nav = document.getElementById('navWrap');
+            const dimm = document.querySelector('.dimm');
+
+            if (!btn || !nav || !dimm) return;
+
+            const closeMenu = () => {
+                nav.classList.remove('active');
+                btn.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
+                dimm.classList.remove('active');
+            };
+
+            btn.addEventListener('click', function(){
+                const isOpen = nav.classList.toggle('active');
+
+                btn.classList.toggle('is-open', isOpen);
+                btn.setAttribute('aria-expanded', String(isOpen));
+                document.body.classList.toggle('no-scroll', isOpen);
+                dimm.classList.toggle('active', isOpen);
+                document.body.classList.toggle('no-scroll', isOpen);
+            });
+
+            nav.addEventListener('click', (e) => {
+                const link = e.target.closest('.nav-list a');
+                if (link) closeMenu();
+            });
+
+            dimm.addEventListener('click', closeMenu);
+
+            window.addEventListener('hashchange', closeMenu);
+        }
+
+        menuBtnclick();
+    </script>
 </body>
 </html>
